@@ -131,3 +131,48 @@ if countorradix == count:
     time.sleep(1.0)
     randorno = input("Type 'Y' to create your own input or 'N' to run a prebuilt list: ")
     time.sleep(1.0)
+    if randorno == yes:
+        print("So you want to build your own input? Let's do it.")
+        time.sleep(1.0)
+        print("I'll need: how many elements you want, a starting index and a stopping index.")
+        time.sleep(1.0)
+        howmany = int(input("How many total integers would you like?: "))
+        time.sleep(1.0)
+        print("That's a lot, I mean, OK. We'll try our best.")
+        time.sleep(1.0)
+        start = int(input("What integer would you like to start at?: "))
+        time.sleep(1.0)
+        stop = int(input("Finally, what integer would you like to end at?: "))
+        print("Great choice. Wonderful clustering.")
+        time.sleep(1.0)
+
+        inputlist = randomlist(howmany, start, stop)
+
+        print("Think we got something here, let's run it.")
+        time.sleep(1.0)
+
+        output = csort(inputlist)
+
+        print("Your COUNTING input list is: ", inputlist)
+        print("Your COUNTING 'count' list is: ", output[1])
+        print("Your COUNTING 'cumulative' list is: ", output[2])
+        print("Your COUNTING sorted list is: ", output[0])
+
+    elif ranorno == no:
+        print("Little busy? Don't want to build your own list?")
+        time.sleep(1.0)
+        print("No problem, we got you.")
+
+        inputlist = randomlist(30, 1, 10)
+
+        output = csort(inputlist)
+
+        print("Your COUNTING input list is: ", inputlist)
+        print("Your COUNTING 'count' list is: ", output[1])
+        print("Your COUNTING 'cumulative' list is: ", output[2])
+        print("Your COUNTING sorted list is: ", output[0])
+
+    else:
+        print("I don't think that was an available option.")
+
+elif countorradix == radix:
