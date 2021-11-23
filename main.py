@@ -5,9 +5,7 @@ from array import array
 # Random list generator from input numbers. Fairly basic.
 def randomlist(howmany, start, stop):
     randomlist = list()
-    for i in range(howmany):
-        randint = random.randrange(start,stop)
-        randomlist.append(randint)
+    randomlist = [random.randint(start,stop) for i in range(howmany)]
     return randomlist
 
 # Will start with COUNTINGSORT
@@ -109,6 +107,8 @@ def rsort(inputlist):
 ##                  USER INTERACTION PROCESSES                        ##
 ########################################################################
 
+nlandquotes = "Space echoes like an immense tomb, yet the stars still burn. Why does the sun take so long to die ?;Whenever its name has been anything but a jest, philosophy has been haunted by a subterranean question: What if knowledge were a means to deepen unknowing?;Nothing human makes it out of the near-future.;Ever since it became theoretically evident that our precious personal identities were just brand-tags for trading crumbs of labour-power on the libidino-economic junk circuit, the vestiges of authorial theatricality have been wearing thinner.;After all, the ideal of bourgeois politics is the absence of politics, since capital is nothing other than the consistent displacement of social decision-making into the marketplace.;If there is a conclusion it is zero.;One ascends into profundity, but profundity is nothing but a complication of the shallows, and 'one' is nowhere.;is thus that machinic processes are not merely functions, but also sufficient conditions for the replenishing of functioning, immanent reprogrammings of the real, ‘not merely functioning, but formation and autoproduction’"
+
 inputlist = list()
 count = "C"
 radix = "R"
@@ -203,15 +203,11 @@ elif countorradix == radix:
         time.sleep(1.0)
 
         inputlist = randomlist(howmany, start, stop)
+        print("Your RADIX input list is: ", inputlist)
+
         output = rsort(inputlist)
 
-        print("Your RADIX input list is: ", inputlist)
         print("Your RADIX sorted list is: ", output)
-
-        time.sleep(2.0)
-        print("I know, the input list is sorted. No amount of random.shuffle or random.sample worked.")
-        time.sleep(1.0)
-        print("I even tried a For loop to iterate and reinsert into the input list. None worked.")
 
     elif randorno == no:
         print("I understand, I used this option to test it myself. Sometimes.")
@@ -220,11 +216,10 @@ elif countorradix == radix:
         time.sleep(1.0)
 
         inputlist = randomlist(50, 200, 300)
-        random.shuffle(inputlist)
+        print("Your RADIX input list is: ", inputlist)
 
         output = rsort(inputlist)
 
-        print("Your RADIX input list is: ", inputlist)
         print("Your RADIX sorted list is: ", output)
 
     else:
@@ -240,11 +235,10 @@ elif countorradix == radix:
         time.sleep(2.0)
 
         inputlist = randomlist(75, 400, 550)
-        random.shuffle(inputlist)
+        print("Your RADIX input list is: ", inputlist)
 
         output = rsort(inputlist)
 
-        print("Your RADIX input list is: ", inputlist)
         print("Your RADIX sorted list is: ", output)
 
         time.sleep(2.0)
@@ -256,3 +250,14 @@ else:
     print("I don't think we should see each other anymore. It's not you. It's me.")
     time.sleep(1.0)
     print("Have a great holiday though, I still wish the world for you.")
+    time.sleep(1.0)
+    print("OK, I may have something in consolation, let me see if I can find it here.")
+    time.sleep(4.0)
+    time.sleep(1.0)
+    print("Here it is, ok, let's give this a try.")
+
+    nlandlist = nlandquotes.split(';')
+    quotepicker = random.randint(0,len(nlandlist))
+
+    time.sleep(1.0)
+    print("As consolation, here is a randomly chosen quote from a bad philosopher who occasionally dabbles in mathematics: ", "'", nlandlist[quotepicker], "'")
