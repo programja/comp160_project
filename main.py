@@ -105,82 +105,29 @@ def rsort(inputlist):
     outputlist = inputlist
     return outputlist
 
-
-
-print("Welcome to RADIXSORT you big goofball.")
-time.sleep(1.0)
-print("Let's begin the test.")
-time.sleep(1.0)
-print("Generating an input list.")
-time.sleep(1.0)
-inputlist = randomlist(50,200,300)
-
-radixoutputlist = rsort(inputlist)
-
-print("Radix input list: ", inputlist)
-print("Radix output list: ", radixoutputlist)
-
-
-
-
-
-
-
-
-
-
+########################################################################
 # USER INTERACTION PROCESSES
 
-#
-# inputlist = list()
-# yes = "Y"
-# no = "N"
-#
-# print("Welcome to COUNTINGSORT, we're glad you're here.")
-# time.sleep(1.0)
-# print("As usual some basic rules: ")
-# time.sleep(1.0)
-# print("No negative integers and the more cluster-y or repeating the better.")
-# time.sleep(1.0)
-# print("This is COUNTINGSORT so, yeah, you'll do fine.")
-# time.sleep(1.0)
-# randorno = input("Type 'Y' to create your own input or 'N' to run a prebuilt list: ")
-# time.sleep(1.0)
-#
-# if randorno == yes:
-#     print("Give me a total # of values, start and stop and we can randomize the rest.")
-#     time.sleep(1.0)
-#     howmany = int(input("How many values do you want?: "))
-#     time.sleep(0.5)
-#     print("That many? Really? OK, ok we'll see what we can do.")
-#     time.sleep(0.5)
-#     start = int(input("What is the starting value you want?: "))
-#     time.sleep(0.5)
-#     print("Just kidding, we can handle this. Little computer science joke.")
-#     time.sleep(0.5)
-#     stop = int(input("What value would you like to end with?: "))
-#     time.sleep(0.5)
-#     print("Got it. Give me a second.")
-#
-#     inputlist = randomlist(howmany,start,stop)
-#
-# elif randorno == no:
-#     print("Got it, using a pre-built list.")
-#
-#     inputlist = randomlist(30,1,10)
-#
-# else:
-#     print("That is not a valid choice. You know this, don't be weird.")
-#
-# time.sleep(3.0)
-# print("Running COUNTINGSORT now. Should take at most O(n+k) time.")
-# time.sleep(1.0)
-# print(" . . . . ")
-# time.sleep(1.0)
-#
-# output = csort(inputlist)
-#
-# print("Input list: ", inputlist)
-# print("Intermediary count list: ", output[1])
-# print("Intermediary cumulative list: ", output[2])
-# print("Sorted output list: ", output[0])
+
+inputlist = list()
+count = "C"
+radix = "R"
+yes = "Y"
+no = "N"
+
+print("Welcome to COUNTINGSORT and RADIXSORT, we're glad you're here.")
+time.sleep(1.0)
+print("As usual some basic rules: ")
+time.sleep(1.0)
+print("No negative integers and the more cluster-y or repeating the better for COUNTINGSORT.")
+print("Obviously the same for RADIXSORT minus the cluster part, the larger the integers the more interesting; but do what you'd like.")
+time.sleep(1.0)
+print("Time for your decision, would you like COUNTINSORT or RADIXSORT?.")
+time.sleep(1.0)
+countorradix = input("Type 'C' for COUNTINGSORT or 'R' for RADIXSORT: ")
+
+if countorradix == count:
+    print("Welcome to COUNTINGSORT. Great choice cluster-lover.")
+    time.sleep(1.0)
+    randorno = input("Type 'Y' to create your own input or 'N' to run a prebuilt list: ")
+    time.sleep(1.0)

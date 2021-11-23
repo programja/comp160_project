@@ -35,3 +35,7 @@ There is an 'easy' option for both algorithms if you don't want to interact with
 ## What conclusions were drawn? ##
 
 ## What did I learn during this entire process? ##
+I should have used my System76 Linux machine. <br>
+A simple RADIXSORT can crash my computer 15 minutes before the deadline:
+![alt text](lolfailureatmidnight1.jpg "LOL Midnight BSOD")
+![alt text](lolfailureatmidnight2.jpg "LOL Midnight BSOD")
