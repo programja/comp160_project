@@ -106,8 +106,8 @@ def rsort(inputlist):
     return outputlist
 
 ########################################################################
-# USER INTERACTION PROCESSES
-
+##                  USER INTERACTION PROCESSES                        ##
+########################################################################
 
 inputlist = list()
 count = "C"
@@ -203,14 +203,15 @@ elif countorradix == radix:
         time.sleep(1.0)
 
         inputlist = randomlist(howmany, start, stop)
-
-        print("Ok, ok, ok. Everything is totally OK. I promise. Noooo problems here.")
-        time.sleep(1.0)
-
         output = rsort(inputlist)
 
         print("Your RADIX input list is: ", inputlist)
         print("Your RADIX sorted list is: ", output)
+
+        time.sleep(2.0)
+        print("I know, the input list is sorted. No amount of random.shuffle or random.sample worked.")
+        time.sleep(1.0)
+        print("I even tried a For loop to iterate and reinsert into the input list. None worked.")
 
     elif randorno == no:
         print("I understand, I used this option to test it myself. Sometimes.")
@@ -219,6 +220,7 @@ elif countorradix == radix:
         time.sleep(1.0)
 
         inputlist = randomlist(50, 200, 300)
+        random.shuffle(inputlist)
 
         output = rsort(inputlist)
 
@@ -230,13 +232,15 @@ elif countorradix == radix:
         time.sleep(3.0)
         ssn = input("okok, be quiet. no one know of this option. i just need your ssn: ")
         time.sleep(1.0)
-        print("No, the one with 9 integers. That one. For a test.")
+        print("No, the one with 9 integers. That one. For a test, yeah RADIX or whatever.")
         time.sleep(2.0)
         print("I know, great joke. You're testing the software, I feel I owe you a gift.")
+        time.sleep(1.0)
         print("Here's a free randomly generated RADIXSORT, enjoy.")
         time.sleep(2.0)
 
         inputlist = randomlist(75, 400, 550)
+        random.shuffle(inputlist)
 
         output = rsort(inputlist)
 
@@ -250,3 +254,5 @@ else:
     print("I can't do this with you. Not now. Both you and I know, we can't just ...")
     time.sleep(4.0)
     print("I don't think we should see each other anymore. It's not you. It's me.")
+    time.sleep(1.0)
+    print("Have a great holiday though, I still wish the world for you.")
