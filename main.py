@@ -129,6 +129,8 @@ countorradix = input("Type 'C' for COUNTINGSORT or 'R' for RADIXSORT: ")
 if countorradix == count:
     print("Welcome to COUNTINGSORT. Great choice cluster-lover.")
     time.sleep(1.0)
+    print("In the following, let us know you want to create your own random list or use a pre-built list.")
+    time.sleep(1.0)
     randorno = input("Type 'Y' to create your own input or 'N' to run a prebuilt list: ")
     time.sleep(1.0)
     if randorno == yes:
@@ -158,10 +160,11 @@ if countorradix == count:
         print("Your COUNTING 'cumulative' list is: ", output[2])
         print("Your COUNTING sorted list is: ", output[0])
 
-    elif ranorno == no:
+    elif randorno == no:
         print("Little busy? Don't want to build your own list?")
         time.sleep(1.0)
         print("No problem, we got you.")
+        time.sleep(1.0)
 
         inputlist = randomlist(30, 1, 10)
 
@@ -176,3 +179,74 @@ if countorradix == count:
         print("I don't think that was an available option.")
 
 elif countorradix == radix:
+    print("Welcome to RADIXSORT. Great choice, big numbers are weird and great.")
+    time.sleep(1.0)
+    print("In the following, let us know you want to create your own random list or use a pre-built list.")
+    time.sleep(1.0)
+    randorno = input("Type 'Y' to create your own input or 'N' to run a prebuilt list: ")
+    time.sleep(1.0)
+    if randorno == yes:
+        print("So you want to build your own input? Let's do it.")
+        time.sleep(1.0)
+        print("I'll need: how many elements you want, a starting index and a stopping index.")
+        time.sleep(1.0)
+        howmany = int(input("How many total integers would you like?: "))
+        time.sleep(1.0)
+        print("That's the best you can do? I mean, we all don't need to reach for the stars.")
+        time.sleep(1.0)
+        start = int(input("What integer would you like to start at?: "))
+        time.sleep(1.0)
+        stop = int(input("Finally, what integer would you like to end at?: "))
+        print("Great choice. Great typing. Reminds you of old text-based games right?")
+        time.sleep(1.0)
+        print("I'm joking. But you did do wonderful. Let's run this RADIXSORT")
+        time.sleep(1.0)
+
+        inputlist = randomlist(howmany, start, stop)
+
+        print("Ok, ok, ok. Everything is totally OK. I promise. Noooo problems here.")
+        time.sleep(1.0)
+
+        output = rsort(inputlist)
+
+        print("Your RADIX input list is: ", inputlist)
+        print("Your RADIX sorted list is: ", output)
+
+    elif randorno == no:
+        print("I understand, I used this option to test it myself. Sometimes.")
+        time.sleep(1.0)
+        print("Let's take a look here.")
+        time.sleep(1.0)
+
+        inputlist = randomlist(50, 200, 300)
+
+        output = rsort(inputlist)
+
+        print("Your RADIX input list is: ", inputlist)
+        print("Your RADIX sorted list is: ", output)
+
+    else:
+        print("You know this isn't allowed. Or maybe it is? Let's see.")
+        time.sleep(3.0)
+        ssn = input("okok, be quiet. no one know of this option. i just need your ssn: ")
+        time.sleep(1.0)
+        print("No, the one with 9 integers. That one. For a test.")
+        time.sleep(2.0)
+        print("I know, great joke. You're testing the software, I feel I owe you a gift.")
+        print("Here's a free randomly generated RADIXSORT, enjoy.")
+        time.sleep(2.0)
+
+        inputlist = randomlist(75, 400, 550)
+
+        output = rsort(inputlist)
+
+        print("Your RADIX input list is: ", inputlist)
+        print("Your RADIX sorted list is: ", output)
+
+        time.sleep(2.0)
+        print("You're welcome. Happy Holidays.")
+
+else:
+    print("I can't do this with you. Not now. Both you and I know, we can't just ...")
+    time.sleep(4.0)
+    print("I don't think we should see each other anymore. It's not you. It's me.")
